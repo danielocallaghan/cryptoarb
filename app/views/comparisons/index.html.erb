@@ -1,25 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Comparisons</h1>
-
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th scope="col"></th>
+      <th scope="col">ETH</th>
+      <th scope="col">BTC</th>
+      <th scope="col">BCH</th>
     </tr>
   </thead>
-
   <tbody>
-    <% @comparisons.each do |comparison| %>
       <tr>
-        <td><%= link_to 'Show', comparison %></td>
-        <td><%= link_to 'Edit', edit_comparison_path(comparison) %></td>
-        <td><%= link_to 'Destroy', comparison, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+      <th scope="row">Spread (%)</th>
+      <td><%= @kraken_btcmkts_eth_spread %></td>
+      <td><%= @kraken_btcmkts_btc_spread %></td>
+      <td><%= @kraken_btcmkts_bch_spread %></td>
+    </tr>
+    <tr>
+      <th scope="row">Last Kraken (EUR)</th>
+      <td><%= @kraken_eur_eth_last %></td>
+      <td><%= @kraken_eur_btc_last %></td>
+      <td><%= @kraken_eur_bch_last %></td>
+    </tr>
+    <tr>
+      <th scope="row">Last BTC Markets (AUD) </th>
+      <td><%= @btcmkts_aud_eth_last %></td>
+      <td><%= @btcmkts_aud_btc_last %></td>
+      <td><%= @btcmkts_aud_bch_last %></td>
+    </tr>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Comparison', new_comparison_path %>

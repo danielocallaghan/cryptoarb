@@ -4,12 +4,24 @@ class ComparisonsController < ApplicationController
   # GET /comparisons
   # GET /comparisons.json
   def index
-    @comparisons = Comparison.all
+   @kraken_btcmkts_btc_spread = Comparison.kraken_btcmkts_btc_spread
+   @kraken_btcmkts_eth_spread = Comparison.kraken_btcmkts_eth_spread
+   @kraken_btcmkts_bch_spread = Comparison.kraken_btcmkts_bch_spread
+   
+   @kraken_eur_btc_last = Comparison.kraken_eur_btc_last
+   @kraken_eur_eth_last = Comparison.kraken_eur_eth_last
+   @kraken_eur_bch_last = Comparison.kraken_eur_bch_last
+   
+   @btcmkts_aud_btc_last = Comparison.btcmkts_aud_btc_last
+   @btcmkts_aud_eth_last = Comparison.btcmkts_aud_eth_last
+   @btcmkts_aud_bch_last = Comparison.btcmkts_aud_bch_last
+   
   end
 
   # GET /comparisons/1
   # GET /comparisons/1.json
   def show
+    @comp = Comparison.new
   end
 
   # GET /comparisons/new

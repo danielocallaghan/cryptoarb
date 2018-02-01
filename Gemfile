@@ -34,6 +34,9 @@ gem 'nl-btcmarkets'
 
 gem 'hashie'
 
+gem 'sprockets'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
